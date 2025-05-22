@@ -1,6 +1,6 @@
 # MathMorph - Math Formula Discovery & Reasoning Pipeline
 MathMorph is a symbolic reasoning and machine learning framework designed to generate, verify and explain novel mathematical formulas.
-![MathMorph Banner](assets/banner.png)
+![MathMorph Banner](assets/banner1.png)
 
 ---
 
