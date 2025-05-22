@@ -1,0 +1,122 @@
+quadruplet_primes:
+  - pattern: 'the quadruplet (?P<p1>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*), (?P<p2>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*), (?P<p3>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*), (?P<p4>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) are all primes'
+    priority: 5
+prime_factors:
+  - pattern: '(?:the )?prime factors of (?P<rhs>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) are (?P<lhs1>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*), (?P<lhs2>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) and (?P<lhs3>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*)'
+    priority: 5
+prime_exclusion_zone_range:
+  - pattern: '(?:the )?prime exclusion zone of (?P<n>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) has a range from (?P<lo>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) to (?P<hi>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*)'
+    priority: 5
+prime_exclusion_vals:
+  - pattern: '(?:the )?(?P<order>[A-Za-z0-9_-]+) prime exclusion zone (?P<local>overshoot|undershoot) value of (?P<n>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) is (?P<val>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*)'
+    priority: 10
+prime_gap:
+  - pattern: 'the gap between the primes (?P<lhs1>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) and (?P<lhs2>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) is (?P<rhs>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*)'
+    priority: 5
+triplet_primes:
+  - pattern: 'triplet primes are (?P<p1>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*), (?P<p2>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*), and (?P<p3>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*)'
+    priority: 5
+diff_of_primes:
+  - pattern: '(?:the )?(?:difference|subtraction) (?:between|of) (?P<lhs1>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) and (?P<lhs2>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) is a prime(?: number)?'
+    priority: 5
+prime_exclusion_zone:
+  - pattern: '(?:the )?prime exclusion zone of (?P<n>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) is (?P<v>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*)'
+    priority: 5
+
+twin_primes:
+  - pattern: '(?P<lhs1>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) and (?P<lhs2>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) are twin primes'
+    priority: 5
+
+next_prime:
+  - pattern: '(?P<lhs>\w+) is the (?:next|following) prime(?: number)? after (?P<rhs>\w+)'
+    priority: 5
+  - pattern: '(?:what|which) number is (?:the )?(?:next|following) prime(?: number)? after (?P<lhs>\w+)'
+    priority: 5
+
+sum_of_two_primes:
+  - pattern: 'the sum of (two|2) primes? is (?P<rhs>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*)'
+    priority: 5
+
+is_prime:
+  - pattern: '(?P<prime>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) is a prime(?: number)?'
+    priority: 5
+
+is_not_prime:
+  - pattern: '(?P<prime>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) is not a prime(?: number)?'
+    priority: 10
+
+prime_order:
+  - pattern: '(?P<lhs>\w+) is the (?P<order>[A-Za-z0-9_-]+) prime(?: number)?'
+    priority: 10
+
+where_is_prime:
+  - pattern: 'what(?: is)? the (?P<order>[A-Za-z0-9_-]+) prime number\??'
+    priority: 10
+  - pattern: '(?:find|what is)?the (?P<order>[A-Za-z0-9_-]+) prime'
+    priority: 10
+
+squared:
+  - pattern: '(?P<base>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) squared (?:is|equals) (?P<rhs>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*)'
+    priority: 40
+
+cubed:
+  - pattern: '(?P<base>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) cubed (?:is|equals) (?P<rhs>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*)'
+    priority: 40
+
+power:
+  - pattern: '(?P<base>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) to the (?P<exp>[A-Za-z0-9_-]+) power (?:is|equals) (?P<rhs>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*)'
+    priority: 40
+
+sqrt:
+  - pattern: '(?:the )?square root of (?P<radicand>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) (?:is|equals) (?P<rhs>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*)'
+    priority: 40
+
+cbrt:
+  - pattern: '(?:the )?cube root of (?P<radicand>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) (?:is|equals) (?P<rhs>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*)'
+    priority: 40
+
+root:
+  - pattern: '(?P<degree>[A-Za-z0-9_-]+) root of (?P<radicand>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) (?:is|equals) (?P<rhs>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*)'
+    priority: 40
+
+divisible:
+  - pattern: '(?P<a>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) is divisible by (?P<b>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*)'
+    priority: 50
+
+divides:
+  - pattern: '(?P<a>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) divides (?P<b>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*)'
+    priority: 50
+
+factor:
+  - pattern: '(?P<a>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) is a factor of (?P<b>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*)'
+    priority: 50
+
+remainder:
+  - pattern: '(?P<dividend>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) leaves a remainder of (?P<remainder>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) when divided by (?P<divisor>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*)'
+    priority: 60
+
+div:
+  - pattern: '(?P<dlhs1>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) divided by (?P<dlhs2>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) (?:is|equals) (?P<drhs>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*)'
+    priority: 70
+  - pattern: 'the quotient of (?P<dlhs1>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) and (?P<dlhs2>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) (?:is|equals) (?P<drhs>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*)'
+    priority: 70
+  - pattern: '(?P<dlhs1>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) over (?P<dlhs2>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) (?:is|equals) (?P<drhs>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*)'
+    priority: 70
+
+mul:
+  - pattern: 'the product of (?P<mlhs1>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) and (?P<mlhs2>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) (?:is|equals) (?P<mrhs>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*)'
+    priority: 70
+  - pattern: '(?P<mlhs1>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) times (?P<mlhs2>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) (?:is|equals) (?P<mrhs>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*)'
+    priority: 70
+
+add:
+  - pattern: 'the sum of (?P<blhs1>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) and (?P<blhs2>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) (?:is|equals) (?P<brhs>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*)'
+    priority: 80
+
+sub:
+  - pattern: '(?P<blhs1>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) minus (?P<blhs2>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*) (?:is|equals) (?P<brhs>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*)'
+    priority: 80
+
+eq:
+  - pattern: '\b(?P<lhs>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*)\b (is|equals) (?P<rhs>[+-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?|[+-]?\.\d+|[A-Za-z_][A-Za-z_0-9]*)[\.\?]?$'
+    priority: 100
