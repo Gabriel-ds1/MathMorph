@@ -195,7 +195,6 @@ The pipeline performs:
 
 ---
 
-```markdown
 ## 🏁 Quick Start
 
 1. Clone the repo:
@@ -215,7 +214,8 @@ The pipeline performs:
    ```bash
    python main.py
    ```
-```
+
+---
 
 ## 🧑‍🔬 Logging, Explainability & Error Analysis
 
